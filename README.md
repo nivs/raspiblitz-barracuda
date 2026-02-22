@@ -1,3 +1,5 @@
+Add visuals
+
 ## The [RaspiBlitz](https://github.com/rootzoll/raspiblitz) is a DIY Bitcoin full node running together with a Lightning node on a Raspberry Pi with a touchscreen display for easy setup & monitoring.
 
 ## Components
