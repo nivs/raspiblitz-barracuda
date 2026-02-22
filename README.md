@@ -1,6 +1,6 @@
-The [RaspiBlitz](https://github.com/rootzoll/raspiblitz) is a DIY Bitcoin full node running together with a Lightning node on a Raspberry Pi with a touchscreen display for easy setup & monitoring.
+## The [RaspiBlitz](https://github.com/rootzoll/raspiblitz) is a DIY Bitcoin full node running together with a Lightning node on a Raspberry Pi with a touchscreen display for easy setup & monitoring.
 
-Components
+## Components
 - [SanDisk SSD PLUS 1TB Internal SSD](https://www.amazon.com/gp/product/B07D998212)
 - [UGREEN 2.5" Hard Drive Enclosure](https://www.amazon.com/gp/product/B06XWRRMYX)
 - MicroSD Card 32GB
@@ -33,13 +33,10 @@ Add `dtparam=act_led_gpio=16` to `/boot/config.txt`.
 
 ## Fan control (optional)
 
-Add to `/boot/config.txt`:
-```
-dtoverlay=gpio-fan,gpiopin=14,temp=60000
-```
-
 Connect GPIO14 via 1k resistor to a BC547 transistor to control fans (in the heatsink case or an additional external one).
 See the [connections schematic](raspiblitz-barracuda-connections.pdf).
+
+Add `dtoverlay=gpio-fan,gpiopin=14,temp=60000` to `/boot/config.txt`.
 
 
 ## LCD
@@ -67,12 +64,12 @@ The indication can be read via GPIO4.
 It is recommended to trigger a shutdown when the battery capacity reaches 1% to avoid data corruption before the hardware protection cuts power.
 
 1. Enable I2C
-- Add or uncomment `dtparam=i2c_arm=on` to `/boot/config.txt`
-- Add `i2c-dev` to `/etc/modules` if it's not already there
-- Reboot
-- Install i2c-tools: `sudo apt install -y i2c-tools`
-- Scan the bus `sudo i2cdetect -y 1` - you should see 0x62 for the UPS CW2015 interface
-- You can optionally run the script in the UPS Lite docs to see the reported status
+   - Add or uncomment `dtparam=i2c_arm=on` to `/boot/config.txt`
+   - Add `i2c-dev` to `/etc/modules` if it's not already there
+   - Reboot
+   - Install i2c-tools: `sudo apt install -y i2c-tools`
+   - Scan the bus `sudo i2cdetect -y 1` - you should see 0x62 for the UPS CW2015 interface
+   - Optionally run the script in the UPS Lite docs to see the reported status
 2. Put `ups_shutdown.py` under `/home/pi`
 3. Put `ups_monitor.service` under `/etc/systemd/system/`
 4. Reload the systemd daemon: `sudo systemctl daemon-reload`
