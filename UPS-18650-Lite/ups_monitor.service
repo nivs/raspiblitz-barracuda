@@ -1,0 +1,16 @@
+[Unit]
+Description=UPS-Lite 18650 Battery Monitor and Auto-Shutdown
+After=multi-user.target
+
+[Service]
+# Use -u to prevent Python from buffering logs
+ExecStart=/usr/bin/python3 -u /home/pi/ups_shutdown.py
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target
