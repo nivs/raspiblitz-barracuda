@@ -41,6 +41,7 @@ Print files are in the [`chassis/`](chassis/) directory:
 ## Power-On / Reset Switch
 
 Connect a momentary switch between **GPIO3** and **GND**. Use a switch with an integrated LED for the activity indicator.
+Alternatively, you can connect the momentary switch to the UPS's power switch, but this is suboptimal as it will not trigger the `gpio-shutdown` event.
 
 ## Activity LED
 
@@ -78,7 +79,7 @@ In this build the UPS Lite is **not** mounted as a HAT — it is wired directly:
 - **GPIO2 / GPIO3 (I2C)** — battery state readout
 - **GPIO4** — external power detection
 
-See the [wiring photo](UPS-18650-Lite/UPS-18650-Lite-Connections.jpg).
+See the [wiring photo](images/ups-conn.jpg).
 
 ### External Power Detection
 
