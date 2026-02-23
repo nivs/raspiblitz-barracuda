@@ -2,7 +2,7 @@
 
 # RaspiBlitz Barracuda
 
-A custom-built [RaspiBlitz](https://github.com/rootzoll/raspiblitz) — a DIY Bitcoin full node running together with a Lightning node on a Raspberry Pi — housed in a 3D-printed chassis with UPS battery backup, fan control, and an LCD touchscreen.
+A custom-built [RaspiBlitz](https://github.com/rootzoll/raspiblitz) - a DIY Bitcoin full node running together with a Lightning node on a Raspberry Pi - housed in a 3D-printed chassis with UPS battery backup, fan control, and an LCD touchscreen.
 
 ## Components
 
@@ -23,33 +23,45 @@ A custom-built [RaspiBlitz](https://github.com/rootzoll/raspiblitz) — a DIY Bi
 | 12mm LED Momentary Switch (6V, Yellow) | Power/reset button |
 | 30 & 24 AWG Flexible Silicone Wire | Internal wiring |
 
+<br>
+
 ## Setup
 
 Follow the RaspiBlitz [setup instructions](https://docs.raspiblitz.org/docs/setup/intro) to install the software, then apply the hardware customizations below.
 
 A full [connections schematic](raspiblitz-barracuda-connections.pdf) is included in the repo.
+<br><br>
 
 ## 3D-Printed Chassis
 
 Print files are in the [`chassis/`](chassis/) directory:
 
-- `chassis.3mf` — main enclosure
-- `cover.3mf` — top cover
-- `lightning-bolt.3mf` — decorative emblem
-- `barracuda.f3d` — Fusion 360 source
+- `chassis.3mf` - main enclosure
+- `cover.3mf` - top cover
+- `lightning-bolt.3mf` - decorative emblem
+- `barracuda.f3d` - Fusion 360 source
+
+<img src="images/ready1.jpg" height="225"> <img src="images/ready2.jpg" width="300">
+<br><br>
 
 ## Power-On / Reset Switch
 
 Connect a momentary switch between **GPIO3** and **GND**. Use a switch with an integrated LED for the activity indicator.
+
 Alternatively, you can connect the momentary switch to the UPS's power switch, but this is suboptimal as it will not trigger the `gpio-shutdown` event.
 
-## Activity LED
+See [SHUTDOWN.md](SHUTDOWN.md) for more details.
+
+### Activity LED
 
 1. Connect an LED to **GPIO16** via a 220 ohm resistor.
 2. Add to `/boot/config.txt`:
    ```
    dtparam=act_led_gpio=16
    ```
+
+<img src="images/switch1.jpg" height="225"> <img src="images/switch2.jpg" height="225"> <img src="images/switch3.jpg" height="225">
+<br><br>
 
 ## Fan Control
 
@@ -60,7 +72,12 @@ Add to `/boot/config.txt`:
 dtoverlay=gpio-fan,gpiopin=14,temp=60000
 ```
 
+<img src="images/fan-control.jpg" width="300">
+<br>
+
 ## LCD
+
+<img src="images/display.jpg" width="300">
 
 Follow the [Waveshare setup instructions](https://www.waveshare.com/wiki/3.5inch_RPi_LCD_(B)#Software_Settings).
 
@@ -71,13 +88,16 @@ Follow the [Waveshare setup instructions](https://www.waveshare.com/wiki/3.5inch
    ```bash
    ./brightness.sh 800
    ```
+<br>
 
 ## UPS Lite 18650
 
-In this build the UPS Lite is **not** mounted as a HAT — it is wired directly:
+In this build the UPS Lite is **not** mounted as a HAT - it is wired directly:
 
-- **GPIO2 / GPIO3 (I2C)** — battery state readout
-- **GPIO4** — external power detection
+- **GPIO2 / GPIO3 (I2C)** - battery state readout
+- **GPIO4** - external power detection
+
+<img src="images/ups-conn.jpg">
 
 See the [wiring photo](images/ups-conn.jpg).
 
