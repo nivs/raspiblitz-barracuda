@@ -12,7 +12,7 @@ A custom-built [RaspiBlitz](https://github.com/rootzoll/raspiblitz) - a DIY Bitc
 | [SanDisk SSD PLUS 1TB](https://www.amazon.com/dp/B09NQJMW28) | Blockchain storage |
 | [UGREEN 2.5" Hard Drive Enclosure](https://www.amazon.com/dp/B06XWRRMYX) | SSD enclosure |
 | MicroSD Card 32GB | Boot drive |
-| Waveshare [3.5" RPi LCD (B)](https://www.waveshare.com/wiki/3.5inch_RPi_LCD_(B)) | Touchscreen display |
+| [Waveshare 3.5" RPi LCD (B)](https://www.waveshare.com/wiki/3.5inch_RPi_LCD_(B)) | Touchscreen display |
 | [Raspberry Pi 4 Official PSU](https://www.amazon.com/dp/B07W8XHMJZ) | 15W USB-C power supply |
 | [Dual Fan Heatsink Case](https://www.amazon.com/dp/B07VWM4J4L) | Cooling |
 | [UPS Lite 18650](https://www.aliexpress.com/item/32955634965.html) ([GitHub](https://github.com/linshuqin329/UPS-18650-Lite)) | Battery backup |
