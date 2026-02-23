@@ -16,8 +16,8 @@ A custom-built [RaspiBlitz](https://github.com/rootzoll/raspiblitz) - a DIY Bitc
 | [Raspberry Pi 4 Official PSU](https://www.amazon.com/dp/B07W8XHMJZ) | 15W USB-C power supply |
 | [Dual Fan Heatsink Case](https://www.amazon.com/dp/B07VWM4J4L) | Cooling |
 | [UPS Lite 18650](https://www.aliexpress.com/item/32955634965.html) ([GitHub](https://github.com/linshuqin329/UPS-18650-Lite)) | Battery backup |
-| 40 Pin Stacking Header (8;6mm) | LCD clearance over heatsink |
 | [USB 3.0 Micro-B Ribbon Cable](https://www.aliexpress.com/item/4001289178964.html) (S3-W7, USB-A male down, Micro-B up, 0.1m) | SSD connection |
+| 40 Pin Stacking Header (8/6mm) | LCD clearance over heatsink |
 | 4010 Cooling Fan 40mm | Additional cooling |
 | Micro Mini JST 2.0 PH Connectors (3 & 4 pin) | UPS / fan wiring |
 | 12mm LED Momentary Switch (6V, Yellow) | Power/reset button |
